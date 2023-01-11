@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="62"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imgs/hourglass.gif" type="image/x-icon">
+    <title>TAPMAÝAŇYZ</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="calc">
+            <h2 id="total"></h2>
+            <h2 id="gone"></h2>
+        </div>
+        <div id="calc"><h2 id="left_money"></h2> <p id="man">TMT</p></div>
+        <h2 id="date"></h2>
+    </div>
+
+    <div class="hourglass" id="hourglass">
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+    <div id="breaktime">
+        <img src="./imgs/breaktime.gif" alt="">
+    </div>
+
+    <p id="sec"></p>
+    <script src="./app.js"></script>
+    <!-- For Snow -->
+    <div id="snow"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas></div>
+    <style>
+        #snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+            script.onload = function () {
+                particlesJS("snow", {
+                    "particles": {
+                        "number": {
+                            "value": 200,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "opacity": {
+                            "value": 0.7,
+                            "random": true,
+                            "anim": {
+                                "enable": true
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": true
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 3,
+                            "direction": "bottom",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": true,
+                                "rotateX": 300,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": false
+                            },
+                            "onclick": {
+                                "enable": false
+                            },
+                            "resize": false
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+            document.head.append(script);
+        });
+    </script>
+</body>
+
+</html>
